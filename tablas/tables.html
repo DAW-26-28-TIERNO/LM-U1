@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+</head>
+
+<body>
+    <header>
+        <h1>Tablas</h1>
+    </header>
+    <main>
+        <article>
+            <h2>Mi primera tabla</h2>
+            <table border="1">
+                <tr>
+                    <td>Nombre</td>
+                    <td>Apellido</td>
+                    <td>Email</td>
+                </tr>
+                <tr>
+                    <td>Sete</td>
+                    <td>Ruiz</td>
+                    <td>asdf@asdf.com</td>
+                </tr>
+                <tr>
+                    <td>Juan</td>
+                    <td>García</td>
+                    <td>juan@asdf.com</td>
+                </tr>
+            </table>
+        </article>
+        <article>
+            <h2>Tabla con etiquetas semánticas</h2>
+            <table border="1">
+                <!-- Cabecera de la tabla -->
+                <thead>
+                    <!-- Esto es un comentario -->
+                    <tr>
+                        <th>Producto</th> <!-- th es celda de cabecera -->
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <!-- Cuerpo de la tabla -->
+                <tbody>
+                    <tr>
+                        <td>Tomates</td>
+                        <td>1.56 €</td>
+                    </tr>
+                    <tr>
+                        <td>Aguacata</td>
+                        <td>3.25 €</td>
+                    </tr>
+                    <tr>
+                        <td>Pan</td>
+                        <td>1.12 €</td>
+                    </tr>
+                </tbody>
+                <!-- Pie de la tabla -->
+                <tfoot>
+                    <tr>
+                        <td>Total</td>
+                        <td>10.12 €</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </article>
+        <article>
+            <h2></h2>
+            <table border="1">
+                <!-- tr*5>td*3 -->
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Director</th>
+                        <th>Año</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Las horas</td>
+                        <td rowspan="2">Stephen Daldry</td>
+                        <td>2002</td>
+                    </tr>
+                    <tr>
+                        <td>The Crown</td>
+                        <td>2016</td>
+                    </tr>
+                    <tr>
+                        <td>Titanic</td>
+                        <td>James Cameron</td>
+                        <td>1997</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+        <article>
+            <h2>Tabla semántica con colspan y rowspan</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Hora</th>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8.30 - 9.25</td>
+                        <td>IPE</td>
+                        <td rowspan="3">Programación</td>
+                    </tr>
+                    <tr>
+                        <td>9.25 - 10.20</td>
+                        <td rowspan="2">LM</td>
+                    </tr>
+                    <tr>
+                        <td>10.20 - 11.15</td>
+                    </tr>
+                    <tr>
+                        <td>11.15 - 11.45</td>
+                        <td colspan="2">Recreo</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Total de horas: 30</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </article>
+    </main>
+    <footer>
+        <small>Página hecha por mí</small>
+    </footer>
+</body>
+
+</html>
