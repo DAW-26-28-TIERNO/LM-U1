@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso de HTML</title>
+</head>
+
+<body>
+    <header id="cabeceraPrincipal">
+        <!-- Cabecera de mi página -->
+        <h1>Repaso de HTML</h1>
+        <!-- Menú: lista no ordenada -->
+        <ul>
+            <li>
+                <a href="http://google.com">Google</a>
+            </li>
+            <li>
+                <!-- target _blank para que se abra en otra pestaña-->
+                <a href="http://google.com" target="_blank">Google en otra pestaña</a>
+            </li>
+            <li>
+                <a href="ejercicios/exercisesU1.html">Mi fichero de ejercicios</a>
+            </li>
+            <li>
+                <a href="#seccionTablas">Tablas</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <!-- La parte principal de mi página -->
+         <article>
+            <h2>Listas</h2>
+            <p>Aquí voy a hacer listas de varios tipos.<br>Por ejemplo:</p>
+            <ul>
+                <li>Panadería
+                    <ol>
+                        <li>Palmeras
+                            <ul>
+                                <li>Chocolate negro</li>
+                                <li>Chocolate blanco</li>
+                            </ul>
+                        </li>
+                        <li>Pan de molde</li>
+                    </ol>
+                </li>
+                <li>Frutería
+                    <ol>
+                        <li>Peras</li>
+                        <li>Melocotones</li>
+                        <li>Ciruelas</li>
+                    </ol>
+                </li>
+            </ul>
+         </article>
+         <article id="seccionTablas">
+            <h2>Tablas</h2>
+            <p>Aquí voy a hacer tablas:</p>
+            <table border="1">
+                <!-- caption es el título de la tabla-->
+                <caption>Lista de países y población</caption>
+                <thead>
+                    <tr>    <!-- fila -->
+                        <th>País</th>   <!-- th celda de título -->
+                        <th>Capital</th>
+                        <th>Población</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- tr*3>td*3 Comando para crear 3tr y dentro de cada una 3td-->
+                     <tr>
+                        <td>Portugal</td>
+                        <td>Lisboa</td>
+                        <td>12</td>
+                     </tr>
+                     <tr>
+                        <td colspan="2" rowspan="2">Otro</td>
+                        <td>1</td>
+                     </tr>
+                     <tr>
+                        <td>2</td>
+                     </tr>
+                     <tr>
+                        <td>Tailandia</td>
+                        <td>Bangkok</td>
+                        <td>71.5</td>
+                     </tr>
+                     <tr>
+                        <td>Perú</td>
+                        <td>Lima</td>
+                        <td rowspan="2">35</td>
+                     </tr>
+                     <tr>
+                        <td>Ecuador</td>
+                        <td>Quito</td>
+                     </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">TOTAL: 112.5 millones</td>
+                    </tr>
+                </tfoot>
+            </table>
+         </article>
+    </main>
+    <footer>
+        <!-- Pie -->
+         <small>Esta <strong><em>página</em></strong> la he creado <mark>yo</mark>.</small>
+         <a href="#cabeceraPrincipal">Volver arriba</a>
+    </footer>
+</body>
+
+</html>
