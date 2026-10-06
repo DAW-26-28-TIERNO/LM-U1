@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formularios</title>
 </head>
+
 <body>
     <header>
         <h1>Formularios</h1>
@@ -12,53 +14,98 @@
     <main>
         <article>
             <h2>Formulario de registro</h2>
-            <form action="#">
-                <label for="name">Nombre: </label>
-                <input type="text" id="name" name="name">
-                <br>
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Datos personales</legend>
+                    <label for="name">Nombre: </label>
+                    <input type="text" id="name" name="name" placeholder="Introduce aquí tu nombre..." required
+                        minlength="2" maxlength="20">
+                    <br>
 
-                <label for="age">Edad: </label>
-                <input type="number" id="age" name="age">
-                <br>
+                    <label for="age">Edad: </label>
+                    <input type="number" id="age" name="age" value="18" min="18" max="30">
+                    <br>
 
-                <label for="password">Contraseña: </label>
-                <!-- el for del label y el id del input deben ser iguales -->
-                <!-- el name del input no tiene por qué ser igual, pero suele serlo por comodidad --> 
-                <input type="password" name="pass" id="password">
-                <br>
+                    <label for="password">Contraseña: </label>
+                    <!-- el for del label y el id del input deben ser iguales -->
+                    <!-- el name del input no tiene por qué ser igual, pero suele serlo por comodidad -->
+                    <input type="password" name="pass" id="password">
+                    <br>
 
-                <label for="email">Email: </label>
-                <input type="email" name="email" id="email">
-                <br>
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email">
+                    <br>
 
-                <p>Turno:</p>
-                <!-- El name de todos los radiobuttons tiene que ser el mismo --> 
-                <input type="radio" name="turno" id="diurno" value="diurno">
-                <label for="diurno">Diurno</label>
-                <br>
-                <input type="radio" name="turno" id="vesp" value="vespert">
-                <label for="vesp">Vespertino</label>
-                <br>
-                <input type="radio" name="turno" id="noct" value="noct">
-                <label for="noct">Nocturno</label>
-                <br>
-                <!--Color favorito-->
-                <label for="color">Color favorito: </label>
-                <input type="color" name="color" id="color">
-                <br>
+                    <!-- el NIA es X000000 (letra mayúscula + 6 números)-->
+                    <label for="nia">NIA: </label>
+                    <input type="text" name="nia" id="nia" pattern="[A-Z][0-9]{6}">
+                    <br>
 
-                <!--Fecha de nacimiento-->
-                <label for="birth">Fecha de nacimiento: </label>
-                <input type="date" name="birth" id="birth">
-                <br>
+                    <label for="cp">CP (C. Madrid): </label>
+                    <input type="text" name="cp" id="cp" pattern="[2][8][0-9]{3}">
+                    <br>
+                </fieldset>
+                <fieldset>
+                    <legend>Datos académicos</legend>
+                    <p>Turno:</p>
+                    <!-- El name de todos los radiobuttons tiene que ser el mismo -->
+                    <input type="radio" name="turno" id="diurno" value="diurno">
+                    <label for="diurno">Diurno</label>
+                    <br>
+                    <input type="radio" name="turno" id="vesp" value="vespert">
+                    <label for="vesp">Vespertino</label>
+                    <br>
+                    <input type="radio" name="turno" id="noct" value="noct">
+                    <label for="noct">Nocturno</label>
+                    <br>
+                    <!--Color favorito-->
+                    <label for="color">Color favorito: </label>
+                    <input type="color" name="color" id="color">
+                    <br>
 
-                <!--Fecha y hora del examen de LM-->
-                <label for="exam">Fecha y hora del examen: </label>
-                <input type="datetime-local" name="exam" id="exam">
-                <br>
+                    <!--Fecha de nacimiento-->
+                    <label for="birth">Fecha de nacimiento: </label>
+                    <input type="date" name="birth" id="birth">
+                    <br>
 
+                    <!--Fecha y hora del examen de LM-->
+                    <label for="exam">Fecha y hora del examen: </label>
+                    <input type="datetime-local" name="exam" id="exam">
+                    <br>
+
+                    <!-- Checkbox de asignaturas favoritas -->
+                    <p>Asignatura favorita:</p>
+                    <input type="checkbox" name="course" id="prog" value="programacion">
+                    <label for="prog">Programación</label>
+                    <br>
+                    <input type="checkbox" name="course" id="bbdd" value="bbdd">
+                    <label for="bbdd">Bases de datos</label>
+                    <br>
+
+                    <!-- select: desplegables -->
+                    <label for="teacher">Elige profesor:</label>
+                    <select name="teacher" id="teacher">
+                        <optgroup label="Turno matutino">
+                            <option value="sete">Sete Ruiz</option>
+                            <option value="patricia">Patricia</option>
+                            <option value="laura">Laura</option>
+                        </optgroup>
+                        <optgroup label="Turno Vespertino">
+                            <option value="santi">Santi</option>
+                            <option value="marco">Marco</option>
+                            <option value="ruben">Rubén</option>
+                        </optgroup>
+                    </select>
+                    <br>
+
+                    <label for="comment">Deja un comentario</label>
+                    <textarea name="comment" id="comment" rows="4"></textarea>
+                    <br>
+                </fieldset>
                 <input type="submit" value="Enviar datos">
                 <input type="reset" value="Borrar todo">
+
+
             </form>
         </article>
     </main>
@@ -66,4 +113,5 @@
 
     </footer>
 </body>
+
 </html>
