@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes y vídeos</title>
+</head>
+
+<body>
+    <header>
+        <h1>Contenido multimedia</h1>
+    </header>
+    <main>
+        <article>
+            <h2>Imágenes</h2>
+            <img src="./media/image300x200.png" alt="Imagen en negro con su tamaño">
+
+            <figure>
+                <!-- Dependiendo del ancho de pantalla, elijo una imagen diferente -->
+                <picture>
+                    <!-- image600x400.png cuando el ancho sea mayor a 800px -->
+                    <source srcset="./media/image600x400.png" media="(min-width: 800px)">
+                    <!-- image300x200.png cuando el ancho sea mayor a 600px -->
+                    <source srcset="./media/mani.webp" media="(min-width: 600px)">
+                    <!-- Cuando no se cumple ninguna de las normas (es decir, menor a 600px), image150x100.png-->
+                    <img src="./media/image150x100.png" alt="Imagen en negro con su tamaño">
+                </picture>
+                <figcaption>Imagen diferente según tamaño</figcaption>
+            </figure>
+        </article>
+        <article>
+            <h2>Vídeo</h2>
+            <video src="./media/video.mp4" autoplay loop controls></video>
+        </article>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
